@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+}
+.header-menu {
+  height: 100px;
+}
+
+.patient-list {
+  background-color: #35531c;
+  width: 300px;
+  height: calc(100vh - 100px);
+}
+.rooms {
+  background-color: #2F3E51;
+  height: calc(100vh - 100px);
+}
+
+.care-record {
+  background-color: #FFFFFF;
+  width: calc(100vw - 300px);
+}
