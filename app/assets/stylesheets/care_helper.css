@@ -1,21 +1,49 @@
+/*header-menu*/
+.header-menu {
+  display: flex;
+  align-items: center;
+  background-color: #427942;
+  height: 100px;
+}
+.header-menu a{
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
+  padding: 0 20px;
+}
+/*wrapper*/
 .wrapper {
   display: flex;
 }
-.header-menu {
-  height: 100px;
-}
-
+/*patient-list*/
 .patient-list {
+  display: flex;
+  justify-content: center;
   background-color: #35531c;
   width: 300px;
   height: calc(100vh - 100px);
+  overflow: scroll;
 }
-.rooms {
-  background-color: #2F3E51;
-  height: calc(100vh - 100px);
+.patients {
+  padding: 20px 0px;
 }
-
-.care-record {
-  background-color: #FFFFFF;
+.patient-name {
+  padding: 20px 0px;
+}
+.patient-name a {
+  color: #FAFAFA;
+  text-decoration: none;
+}
+/*care-record*/
+.records {
+  background-color: #67b88b;
   width: calc(100vw - 300px);
+  height: calc(100vh - 100px - 200px);
+  padding: 46px 40px 0;
+  overflow: scroll;
+}
+.record-form {
+  background-color: #3c8145;
+  height: 200px;
+  padding: 20px 40px;
 }
