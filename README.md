@@ -18,9 +18,10 @@
 | blood_type          | string      | null: false                     |
 | work                | string      | null: false                     |
 | family              | string      | null: false                     |
-| contact             | references  | null: false, foreign_key: true  |
+| history             | text        | null: false                     |
+| disease             | text        | null: false                     |
+| medications         | text        | null: false                     |
 | user                | references  | null: false, foreign_key: true  |
-| record              | references  | null: false, foreign_key: true  |
 ### Association
 - belong_to :user
 - has_many :contacts
@@ -47,6 +48,7 @@
 | text                | text        | null: false                     |
 | category            | integer     | null: false                     |
 | user_id             | integer     | null: false                     |
+| profile_id          | references  | null: false, foreign_key: true  |
 ### Association
 - belong_to :user
 - belong_to :profile
