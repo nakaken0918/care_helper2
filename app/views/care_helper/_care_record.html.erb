@@ -1,5 +1,77 @@
+<%# 記録一覧 %>
 <div class="records">
-</div>
 
+  <div class="record">
+    <div class="record-p-upper">
+      <div class="record-date">
+        20xx/xx/xx(木) xx:xx
+      </div>
+    </div>
+
+    <div class="record-p-lower">
+      <div class="record-text">
+        記録内容
+      </div>
+      <div class="record-user">
+        職員名
+      </div>
+    </div>
+  </div>
+
+  <div class="record">
+
+    <div class="record-p-upper">
+      <div class="record-date">
+        20xx/xx/xx(金) xx:xx
+      </div>
+    </div>
+
+    <div class="record-p-lower">
+      <div class="record-text">
+        記録内容
+      </div>
+      <div class="record-user">
+        職員名
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<%# 記録フォーム %>
 <div class="record-form">
+
+  <div class="form-input">
+    <input class="form-text" placeholder= "記録内容を入力">
+  </div>
+
+  <div class = "category-options">
+      <label>
+        <input type="checkbox" name="category" value="adl">
+        <a>ＡＤＬ</a>
+      </label>
+        <label>
+        <input type="checkbox" name="category" value="bpsd">
+        <a>ＢＰＳＤ</a>
+      </label>
+      <label>
+        <input type="checkbox" name="category" value="trouble">
+        <a>トラブル</a>
+      </label>
+      <label>
+        <input type="checkbox" name="category" value="qol">
+        <a>ＱＯＬ</a>
+      </label>
+      <label>
+        <input type="checkbox" name="category" value="rehabilitation">
+        <a>リハビリ</a>
+      </label>
+      <label>
+        <input type="checkbox" name="category" value="medical">
+        <a>医療</a>
+      </label>
+    </div>
+    
+  <input class="form-submit" type="submit" value="保存">
+
 </div>

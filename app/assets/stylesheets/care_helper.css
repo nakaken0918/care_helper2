@@ -7,12 +7,12 @@
 }
 .header-menu a{
   font-size: 16px;
-  color: #FAFAFA;
+  color: #fafafa;
   text-decoration: none;
   padding: 0 20px;
 }
-/*wrapper*/
-.wrapper {
+/*body*/
+.body {
   display: flex;
 }
 /*patient-list*/
@@ -31,19 +31,79 @@
   padding: 20px 0px;
 }
 .patient-name a {
-  color: #FAFAFA;
+  color: #fafafa;
   text-decoration: none;
 }
 /*care-record*/
-.records {
-  background-color: #67b88b;
+.care-record {
   width: calc(100vw - 300px);
+}
+.records {
   height: calc(100vh - 100px - 200px);
+  background-color: #67b88b;
   padding: 46px 40px 0;
   overflow: scroll;
 }
+.record {
+  margin: 10px 0 0 0;
+}
+.record-p-upper {
+
+}
+.record-date {
+  color: #577562;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.record-p-lower {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.record-text {
+  color: #fafafa;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+.record-user {
+  color: #fafafa;
+  font-size: 14px;
+}
+/*record-form*/
 .record-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background-color: #3c8145;
   height: 200px;
-  padding: 20px 40px;
+  padding: 40px;
+}
+.form-input {
+  background-color: #fafafa;
+  width: 100%;
+}
+.form-text {
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+.category-options a {
+  color: #fafafa;
+}
+.form-submit {
+  background-color: #8cb656;
+  border: none;
+  color: #fafafa;
+  font-size: 16px;
+  height: 20px;
+  padding: 0 20px;
+}
+/*patient-profile*/
+.patient-profile {
+  width: calc(100vw - 300px - 500px);
+  height: calc(100vh - 100px);
+  background-color: #2f923d;
 }
