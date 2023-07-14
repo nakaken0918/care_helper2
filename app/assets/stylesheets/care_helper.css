@@ -11,6 +11,9 @@
   text-decoration: none;
   padding: 0 20px;
 }
+.search {
+  display: flex;
+}
 /*body*/
 .body {
   display: flex;
@@ -151,6 +154,3 @@
   width: calc(100% - 50%);
 }
 /*history,disease,medications*/
-.history {
-  height: 
-}

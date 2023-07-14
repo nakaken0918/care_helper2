@@ -16,7 +16,6 @@
 | barth               | date        | null: false                     |
 | gender_id           | integer     | null: false                     |
 | blood_type          | string      | null: false                     |
-| work                | string      | null: false                     |
 | family              | string      | null: false                     |
 | history             | text        | null: false                     |
 | disease             | text        | null: false                     |

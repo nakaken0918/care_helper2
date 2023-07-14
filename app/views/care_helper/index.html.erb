@@ -1,24 +1,5 @@
 <div class="header-menu">
-
-  <div class="account">
-
-    <a href="#">職員名</a>
-
-    <%# if user_signed_in? %><%# 条件分岐（ログインしている場合 %>
-      <a href="#">ログアウト</a>
-    <%# else %><%# //条件分岐（ログインしていない場合 %>
-      <%#<a href="#">ログイン</a>
-    <% end %>
-
-  </div>
-
-  <div class = "create-patient-profile">
-    <a href = "#">利用者登録</a>
-  </div>
-  <div class = "vault">
-    <a href = "#">記録保管庫</a>
-  </div>
-
+  <%= render "header_menu" %>
 </div>
 
 <div class="body">
