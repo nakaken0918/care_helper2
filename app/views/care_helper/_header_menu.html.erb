@@ -1,6 +1,6 @@
 <div class="account">
 
-  <a href="#">職員名</a>
+  <%= current_user.name %>
 
   <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
 
