@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'care_helper/index'
+  devise_for :users
+
   root to: "care_helper#index"
 
 end

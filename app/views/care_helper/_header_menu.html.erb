@@ -1,12 +1,8 @@
 <div class="account">
 
-    <a href="#">職員名</a>
+  <a href="#">職員名</a>
 
-    <%# if user_signed_in? %><%# 条件分岐（ログインしている場合 %>
-      <a href="#">ログアウト</a>
-    <%# else %><%# //条件分岐（ログインしていない場合 %>
-      <%#<a href="#">ログイン</a>
-    <% end %>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
 
   </div>
 
