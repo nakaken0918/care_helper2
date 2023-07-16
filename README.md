@@ -4,6 +4,7 @@
 | Column              | Type    | Options                   |
 | ------------------- | ------- | ------------------------- |
 | name                | string  | null: false               |
+| email               | string  | null: false               |
 | encrypted_password  | string  | null: false               |
 ### Association
 - has_many :profiles
@@ -20,9 +21,9 @@
 | history             | text        | null: false                     |
 | disease             | text        | null: false                     |
 | medications         | text        | null: false                     |
-| user                | references  | null: false, foreign_key: true  |
+| user_id             | integer     | null: false                     |
 ### Association
-- belong_to :user
+- belongs_to :user
 - has_many :contacts
 - has_many :records
 - has_one_attached :image
@@ -38,7 +39,7 @@
 | patient_id          | integer     | null: false                     |
 | profile             | references  | null: false, foreign_key: true  |
 ### Association
-- belong_to :profile
+- belongs_to :profile
 
 ## records table
 | Column              | Type        | Options                         |
@@ -49,5 +50,5 @@
 | user_id             | integer     | null: false                     |
 | profile_id          | references  | null: false, foreign_key: true  |
 ### Association
-- belong_to :user
-- belong_to :profile
+- belongs_to :user
+- belongs_to :profile

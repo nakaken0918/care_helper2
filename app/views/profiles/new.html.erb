@@ -1,0 +1,21 @@
+<div class='patient-profile-form'>
+  <%=form_with model: @profile, local: true do |f|%>
+    <div class='patient-profile-form__field'>
+      <div class='patient-profile-form__field--left'>
+        氏名
+      </div>
+      <div class='patient-profile-form__field--right'>
+        <%= f.text_field :patient, class: 'patient-profile__input', placeholder: '例）猫田太郎'%>
+      </div>
+    </div>
+    <div class='patient-profile-form__field'>
+    </div>
+    
+    <div class='patient-profile-form__field'>
+      <div class='patient-profile-form__field--left'></div>
+      <div class='patient-profile-form__field--right'>
+        <%= f.submit class: 'cpatient-profile-form__action-btn'%>
+      </div>
+    </div>
+  <% end %>
+</div>

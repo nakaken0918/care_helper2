@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   root to: "care_helper#index"
 
+  resources :profiles, only: [:new, :create]
 end
