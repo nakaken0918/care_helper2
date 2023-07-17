@@ -36,7 +36,6 @@
 | address             | string      | null: false                     |
 | email               | string      | null: false                     |
 | phone               | string      | null: false                     |
-| patient_id          | integer     | null: false                     |
 | profile             | references  | null: false, foreign_key: true  |
 ### Association
 - belongs_to :profile

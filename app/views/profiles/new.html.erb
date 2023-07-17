@@ -1,9 +1,9 @@
 <div class='patient-profile-form'>
-  <%=form_with model: @profile, local: true do |f|%>
+  <%=form_with model: @profile_contact, url: profiles_path, local: true do |f|%>
     <div class='patient-profile-form__field'>
       <h2>利用者情報の登録</h2>
 
-      <%= render 'error_messages', model: @profile %>
+      <%= render 'error_messages', model: @profile_contact %>
 
       <div class="img-upload">
         <div class="weight-bold-text">
@@ -20,7 +20,7 @@
       </div>
       <div class='form-group'>
         <div class='form-text'>生年月日</div>
-        <div class='input-birth-wrap'>
+        <div class='side-by-side'>
           <%= raw sprintf(
             f.date_select(
             :birth,
@@ -52,9 +52,35 @@
         <div class='form-text'>家族</div>
         <%= f.text_field :family, class: 'input-default', id:"family", placeholder: '例）夫、長男、長女、次男、孫（女）'%>
     </div>
-    <%# 連絡先～ %>
+    <%# 連絡先 %>
+    <div class='form-group'>
+      <div class='form-text'>連絡先１</div>
+      <div class='side-by-side'>
+        <div class='form-group'>
+          氏名
+          <%= f.text_field :person, class: 'input-default', id:"person", placeholder: '例）猫田太郎'%>
+        </div>
+        <div class='form-group'>
+          関係
+          <%= f.text_field :rilationship, class: 'input-default', id:"relationship", placeholder: '例）長男'%>
+        </div>
+        <div class='form-group'>
+          住所
+          <%= f.text_field :address, class: 'input-default', id:"address", placeholder: '例）〇〇県〇〇市〇〇xx-xx'%>
+        </div>
+      </div>
+      <div class='side-by-side'>
+        <div class='form-group'>
+          Ｅメール
+          <%= f.text_field :email, class: 'input-default', id:"email", placeholder: '例）nekoneko@test.com'%>
+        </div>
+        <div class='form-group'>
+          電話番号
+          <%= f.text_field :phone, class: 'input-default', id:"phone", placeholder: '例）08012345678'%>
+        </div>
+      </div>
+    </div>
 
-    <%# ～連絡先 %>
     <div class="form-group">
       <div class='form-text'>既往歴</div>
       <%= f.text_area :info, class:"patient-text", id:"history", placeholder:"1,000文字まで）出身地、転居歴、職歴、性格、家族関係など）例）〇〇県〇〇市〇〇に生まれる。〇才で結婚し〇〇へ転居。〇才からスーパーで働き始める。大らかな性格。" ,rows:"7" ,maxlength:"1000" %>

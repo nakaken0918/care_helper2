@@ -7,7 +7,6 @@ class CreateContacts < ActiveRecord::Migration[6.0]
       t.string   :address,       null:false
       t.string   :email,         null:false
       t.string   :phone,         null:false
-      t.integer  :patient_id,    null:false
 
       t.references :profile,     null:false, foreign_key: true
 

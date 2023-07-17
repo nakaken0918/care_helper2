@@ -86,8 +86,9 @@
   width: 100%;
 }
 .form-text {
+  background-color: #8cb656;
   border: none;
-  height: 50px;
+  height: 20px;
   width: 100%;
   padding-left: 10px;
 }
@@ -200,11 +201,11 @@ select {
   margin-bottom: 15px;
 }
 /*select-birth*/
-.input-birth-wrap {
+.side-by-side {
   display: flex;
   flex-wrap: wrap;
 }
-.input-birth-wrap select {
+.side-by-side select {
   width: 75px;
   margin-top: 5px;
   height: 45px;
