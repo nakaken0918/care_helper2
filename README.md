@@ -14,7 +14,7 @@
 | Column              | Type        | Options                         |
 | ------------------- | ----------- | ------------------------------- |
 | patient             | string      | null: false                     |
-| barth               | date        | null: false                     |
+| birth               | date        | null: false                     |
 | gender_id           | integer     | null: false                     |
 | blood_type          | string      | null: false                     |
 | family              | string      | null: false                     |

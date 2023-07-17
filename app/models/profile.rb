@@ -4,10 +4,13 @@ class Profile < ApplicationRecord
 
   has_one_attached :image
 
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :gender
+
   with_options presence: true do
     validates :patient
-    validates :parth
-    validates :gender_id
+    validates :barth
+    validates :gender_id, numericality: { other_than: 0, message: "can't be blank"}
     validates :blood_type
     validates :family
     validates :history
