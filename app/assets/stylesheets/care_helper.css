@@ -86,7 +86,6 @@
   width: 100%;
 }
 .form-text {
-  background-color: #8cb656;
   border: none;
   height: 20px;
   width: 100%;
@@ -171,6 +170,13 @@
   display: flex;
   flex-direction: column;
   padding-top: 20px;
+}
+.patient-profile-form-text {
+  background-color: #8cb656;
+  border: none;
+  height: 20px;
+  width: 100%;
+  padding: 0px 10px;
 }
 .patient-profile__action-btn {
   display: inline-block;
