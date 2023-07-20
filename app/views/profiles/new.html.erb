@@ -23,15 +23,17 @@
         <div class='side-by-side'>
           <%= raw sprintf(
             f.date_select(
-            :birth,
-            class:'select-birth',
-            id:"birth",
+            :birth_date,
+            class: 'select-birth',
+            id: "birth_date",
             use_month_numbers: true,
-            prompt:'--',
+            prompt: '--',
             start_year: 1930,
             end_year: (Time.now.year - 5),
-            date_separator: '%s'),
-            "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+            date_separator: '%s'
+            ),
+            "<p> 年 </p>", "<p> 月 </p>", "<p> 日 </p>"
+            ) %>
         </div>
       </div>
     </div>
@@ -62,7 +64,7 @@
         </div>
         <div class='form-group'>
           関係
-          <%= f.text_field :rilationship, class: 'input-default', id:"relationship", placeholder: '例）長男'%>
+          <%= f.text_field :relationship, class: 'input-default', id:"relationship", placeholder: '例）長男'%>
         </div>
         <div class='form-group'>
           住所
@@ -72,26 +74,26 @@
       <div class='side-by-side'>
         <div class='form-group'>
           Ｅメール
-          <%= f.text_field :email, class: 'input-default', id:"email", placeholder: '例）nekoneko@test.com'%>
+          <%= f.text_field :email, class: 'input-default', id:"email", placeholder: '例）nekoneko@test.com', pattern: '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}', title: '有効なメールアドレスを入力してください'%>
         </div>
         <div class='form-group'>
           電話番号
-          <%= f.text_field :phone, class: 'input-default', id:"phone", placeholder: '例）08012345678'%>
+          <%= f.text_field :phone, class: 'input-default', id:"phone", placeholder: '例）08012345678', pattern: '[0-9]+'%>
         </div>
       </div>
     </div>
 
     <div class="form-group">
       <div class='patient-profile-form-text'>既往歴</div>
-      <%= f.text_area :info, class:"patient-text", id:"history", placeholder:"1,000文字まで）出身地、転居歴、職歴、性格、家族関係など）例）〇〇県〇〇市〇〇に生まれる。〇才で結婚し〇〇へ転居。〇才からスーパーで働き始める。大らかな性格。" ,rows:"7" ,maxlength:"1000" %>
+      <%= f.text_area :history, class:"patient-text", id:"history", placeholder:"1,000文字まで）出身地、転居歴、職歴、性格、家族関係など）例）〇〇県〇〇市〇〇に生まれる。〇才で結婚し〇〇へ転居。〇才からスーパーで働き始める。大らかな性格。" ,rows:"7" ,maxlength:"1000" %>
     </div>
     <div class="form-group">
       <div class='patient-profile-form-text'>疾患</div>
-      <%= f.text_area :info, class:"patient-text", id:"disease", placeholder:"1,000文字まで）要支援度、要介護度、認知症の種類、糖尿病などの持病、身体麻痺、禁忌事項など",rows:"7" ,maxlength:"1000" %>
+      <%= f.text_area :disease, class:"patient-text", id:"disease", placeholder:"1,000文字まで）要支援度、要介護度、認知症の種類、糖尿病などの持病、身体麻痺、禁忌事項など",rows:"7" ,maxlength:"1000" %>
     </div>
     <div class="form-group">
       <div class='patient-profile-form-text'>服用薬</div>
-      <%= f.text_area :info, class:"patient-text", id:"medications", placeholder:"1,000文字まで）薬の名前、服用頻度、薬の効能、禁忌事項など",rows:"7" ,maxlength:"1000" %>
+      <%= f.text_area :medications, class:"patient-text", id:"medications", placeholder:"1,000文字まで）薬の名前、服用頻度、薬の効能、禁忌事項など",rows:"7" ,maxlength:"1000" %>
     </div>
 
     <div class='patient-profile-form__field'>

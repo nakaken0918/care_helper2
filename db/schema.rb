@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 2023_07_17_043254) do
     t.string "address", null: false
     t.string "email", null: false
     t.string "phone", null: false
-    t.integer "patient_id", null: false
     t.bigint "profile_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -48,7 +47,7 @@ ActiveRecord::Schema.define(version: 2023_07_17_043254) do
 
   create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "patient", null: false
-    t.date "birth", null: false
+    t.date "birth_date", null: false
     t.integer "gender_id", null: false
     t.string "blood_type", null: false
     t.string "family", null: false
