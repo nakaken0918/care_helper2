@@ -9,9 +9,9 @@ class CreateProfiles < ActiveRecord::Migration[6.0]
       t.string  :family,      null: false
       t.text    :history,     null: false
       t.text    :disease,     null: false
-      t.text    :madications, null: false
+      t.text    :medications, null: false
 
-      t.integer :user_id,     null: false
+      t.references :user,     null: false, foreign_key: true
 
       t.timestamps
     end

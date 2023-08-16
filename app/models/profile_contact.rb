@@ -21,15 +21,14 @@ class ProfileContact
     validates :history
     validates :disease
     validates :medications
-    validates :user_id
   end
 
   def save
     profile = Profile.create(
-      patient: patient, birth_date: birth_date, gender_id: gender_id, blood_type: blood_type, family: family, history: history, disease: disease, medications:medications, user_id: user.id
+      patient: patient, birth_date: birth_date, gender_id: gender_id, blood_type: blood_type, family: family, history: history, disease: disease, medications:medications
     )
     Contact.create(
-      person: person, relationship: relationship, address: address, email: email, phone: phone, profile_id: profile.id
+      person: person, relationship: relationship, address: address, email: email, phone: phone
     )
   end
 

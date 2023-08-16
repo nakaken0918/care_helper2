@@ -16,15 +16,10 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    year = params[:profile_contact][:birth_date]['(1i)'].to_i
-    month = params[:profile_contact][:birth_date]['(2i)'].to_i
-    day = params[:profile_contact][:birth_date]['(3i)'].to_i
-    birth_date = Date.new(year, month, day)
-  
     params.require(:profile_contact).permit(
-      :patient, :gender_id, :blood_type, :family, :history, :disease, :medications, :image,
+      :patient, :birth_date, :gender_id, :blood_type, :family, :history, :disease, :medications, :image,
       :person, :relationship, :address, :email, :phone
-    ).merge(user_id: current_user.id, birth_date: birth_date)
+    ).merge(user_id: current_user.id)
   end
 
 end
