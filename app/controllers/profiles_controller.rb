@@ -6,10 +6,7 @@ class ProfilesController < ApplicationController
 
   def create
     @profile_contact = ProfileContact.new(profile_params)
-    if @profile_contact.valid?
-      birth_date_str = params[:profile_contact]["birth_date(1i)"] + "-" + params[:profile_contact]["birth_date(2i)"] + "-" + params[:profile_contact]["birth_date(3i)"]
-      @profile_contact.birth_date = Time.parse(birth_date_str)
-      @profile_contact.save
+    if @profile_contact.save
       redirect_to root_path
     else
       render :new
@@ -19,10 +16,15 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile_contact).permit(
-      :patient, :birth_date, :gender_id, :blood_type, :family, :history, :disease, :medications, :image,
-      :person, :relationship, :address, :email, :phone
-    ).merge(user_id: current_user.id)
-  end
+    year = params[:profile_contact][:birth_date]['(1i)'].to_i
+    month = params[:profile_contact][:birth_date]['(2i)'].to_i
+    day = params[:profile_contact][:birth_date]['(3i)'].to_i
+    birth_date = Date.new(year, month, day)
   
+    params.require(:profile_contact).permit(
+      :patient, :gender_id, :blood_type, :family, :history, :disease, :medications, :image,
+      :person, :relationship, :address, :email, :phone
+    ).merge(user_id: current_user.id, birth_date: birth_date)
+  end
+
 end
